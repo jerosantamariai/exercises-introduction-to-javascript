@@ -1,14 +1,22 @@
 var bulletPosition = 4;
 
-const spinChamber = () => {
-	var chamberPosition = Math.floor((Math.random() * 6) + 1);
-	return chamberPosition;
-};
+function spinChamber() {
+    var chamberPosition = Math.floor((Math.random() * 6) + 1);
+    console.log(chamberPosition);
+    return chamberPosition;
+}
 
-// Remove the // below and complete the commented lines
-const fireGun = (spinnerPosition) => {
-    //if (...) return ("You're dead!");
-    //else return ("Keep playing!");
-};
+function fireGun() {
+    let position = spinChamber();
+    if (bulletPosition == position)
+        return true;
+    else
+        return false;
+    //you code here
+}
 
-//console.log(fireGun(...));
+if (fireGun() == true) {
+    console.log('you are dead!');
+} else {
+    console.log('Keep playing :)');
+}
